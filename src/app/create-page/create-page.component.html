@@ -1,0 +1,37 @@
+<div class="form-component">
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+
+  <!--  name -->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Movie name </nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="nameErrorTpl">
+      <input nz-input formControlName="name"placeholder="Movie name"/>
+      <ng-template #nameErrorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')">
+          Please input video name!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <!--  Imdb -->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Imdb</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+      <input nz-input formControlName="imdb" placeholder="imdb" />
+      <ng-template #emailErrorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')">
+          Please input your imdb!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control [nzOffset]="7" [nzSpan]="12">
+      <button nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
+      <button nz-button (click)="resetForm($event)">Reset</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+</div>

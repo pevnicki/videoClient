@@ -1,0 +1,23 @@
+<ul nz-menu nzMode="horizontal" class="navigation">
+  <div class="title">
+    <a routerLink="/">{{"Video catalog app".toUpperCase()}}</a>
+  </div>
+  <div class="nav-component">
+
+    <a nz-dropdown nz-icon="setting" [nzDropdownMenu]="menu">
+      Seen movies background
+      <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item (click)="selectChangeHandler('red')" value="red">Red</li>
+        <li nz-menu-item (click)="selectChangeHandler('green')">Green</li>
+        <li nz-menu-item (click)="selectChangeHandler('transparent')">Transparent</li>
+      </ul>
+    </nz-dropdown-menu>
+    <a nz-button nzType="text" [routerLink]="['/', 'create']">Add movie</a>
+  </div>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

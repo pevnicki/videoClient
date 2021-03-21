@@ -1,0 +1,9 @@
+img {
+  border-radius: 40%;
+}
+
+.card {
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #b4b1b1, 0px 4px 18px -4px rgba(241,237,225,0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 4px 18px -4px rgba(241,237,225,0);
+
+}

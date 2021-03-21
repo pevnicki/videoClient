@@ -1,0 +1,16 @@
+.navigation{
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  width: 50%;
+  text-align: left;
+}
+.nav-component{
+  width: 50%;
+  text-align: right;
+}

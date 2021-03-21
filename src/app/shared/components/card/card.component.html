@@ -1,0 +1,15 @@
+<div class="card" >
+  <nz-card  [nzCover]="coverTemplate" [ngStyle]="gridStyle"  [nzActions]="[actionSetting, actionEllipsis]">
+    <nz-card-meta nzTitle = {{video.name}} nzDescription={{video.imdb_link}}></nz-card-meta>
+  </nz-card>
+  <ng-template #coverTemplate>
+    <img alt="example" src="./assets/images/1256439-middle.png"/>
+  </ng-template>
+  <ng-template #actionSetting>
+    <button nz-button nzType="text" nzDanger (click)="deleteVideo(video.id)">Delete</button>
+  </ng-template>
+  <ng-template #actionEllipsis>
+    <v-checkbox v-model=true (click)="updateVideo()">Seen</v-checkbox>
+  </ng-template>
+
+</div>

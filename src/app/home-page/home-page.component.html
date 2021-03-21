@@ -1,0 +1,5 @@
+<div class="card-container">
+  <div *ngFor="let video of videos$ | async">
+    <app-card [video]="video" [color]="cardColor$">
+    </app-card></div>
+</div>
